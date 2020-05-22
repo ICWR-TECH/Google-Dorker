@@ -15,7 +15,7 @@ class crawling():
     def get_page(self,dork,page,ua):
         try:
             x=requests.get(url="https://www.google.com/search?q="+dork+"&start="+str(page)+"0",headers={"User-Agent":ua})
-            return x.content
+            return x.text
         except:
             return "x"
 
